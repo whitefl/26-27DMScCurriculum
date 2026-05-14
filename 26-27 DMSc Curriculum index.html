@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMSc Curriculum & Resources | University of Lynchburg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --lynchburg-crimson: #8a1538;
+            --lynchburg-grey: #4d4d4d;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+        }
+        .bg-crimson { background-color: var(--lynchburg-crimson); }
+        .text-crimson { color: var(--lynchburg-crimson); }
+        .border-crimson { border-color: var(--lynchburg-crimson); }
+        
+        .tab-active {
+            border-bottom: 4px solid var(--lynchburg-crimson);
+            color: var(--lynchburg-crimson);
+            font-weight: bold;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-active .accordion-content {
+            max-height: 1000px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr 80px;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-crimson text-white py-6 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight mb-4 md:mb-0">
+                UNIVERSITY OF <span class="uppercase">Lynchburg</span>
+            </div>
+            <div class="text-right">
+                <h1 class="text-xl md:text-2xl font-light">Doctor of Medical Science (DMSc)</h1>
+                <p class="text-sm opacity-90">Academic Year 2026-2027 Information</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-nav -->
+    <nav class="bg-white border-b sticky top-0 z-10 shadow-sm">
+        <div class="max-w-6xl mx-auto overflow-x-auto whitespace-nowrap">
+            <div class="flex justify-start space-x-8 px-4 py-4">
+                <button onclick="showTab('core')" id="tab-core" class="tab-btn tab-active px-2 py-1">DMSc Core</button>
+                <button onclick="showTab('plus')" id="tab-plus" class="tab-btn px-2 py-1">DMSc+</button>
+                <button onclick="showTab('certificates')" id="tab-certificates" class="tab-btn px-2 py-1">Certificates</button>
+                <button onclick="showTab('concentrations')" id="tab-concentrations" class="tab-btn px-2 py-1">Concentrations</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-4 md:p-8">
+        
+        <!-- Tab: DMSc Core -->
+        <section id="content-core" class="tab-content">
+            <h2 class="text-3xl font-bold text-crimson mb-6">DMSc Core Curriculum (2026-2027)</h2>
+            <p class="mb-6 text-gray-700">The core curriculum is designed to provide a foundation in evidence-based medicine, leadership, and the evolving landscape of healthcare technology.</p>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="course-grid font-bold text-crimson border-b-2">
+                    <div>Code</div><div>Course Title</div><div>Credits</div>
+                </div>
+                <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                <div class="course-grid"><div>PA 910</div><div>Organizational Behavior and Leadership</div><div>3</div></div>
+                <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+            </div>
+        </section>
+
+        <!-- Tab: DMSc+ -->
+        <section id="content-plus" class="tab-content hidden">
+            <h2 class="text-3xl font-bold text-crimson mb-6">DMSc+ Curriculum (2026-2027)</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">Core Component</h3>
+                <div class="space-y-1">
+                    <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                    <div class="course-grid"><div>PA 910</div><div>Organizational Behavior and Leadership</div><div>3</div></div>
+                    <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                    <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                    <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                    <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                    <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                    <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                    <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                </div>
+            </div>
+            <div class="bg-crimson text-white rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-2">Elective Component</h3>
+                <p>Elective courses of choice or predetermined certificate courses. Visit the DMSc Certificate pages for certificate courses.</p>
+            </div>
+        </section>
+
+        <!-- Tab: Certificates -->
+        <section id="content-certificates" class="tab-content hidden">
+            <h2 class="text-3xl font-bold text-crimson mb-2">Graduate Certificates</h2>
+            <p class="mb-8 italic text-gray-600">2026-2027 Academic Year Information. Note: All certificates include PA 959 (1 credit writing course) for non-degree seeking students.</p>
+            
+            <div id="cert-accordion" class="space-y-4">
+                <!-- AI Strategy & Leadership (NEW) -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>AI Strategy & Leadership (NEW)</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 994</div><div>Leadership in AI</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 997</div><div>Ethics & Regulation of AI in Healthcare</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 998</div><div>AI Strategy and Organizational Implementation</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t text-crimson">Total hours required: 9*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthcare Entrepreneurship (NEW) -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Healthcare Entrepreneurship (NEW)</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 927</div><div>Healthcare Entrepreneurship</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 922</div><div>Corporate Compliance</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 920</div><div>Healthcare Administration</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 980</div><div>Legal Aspects of Healthcare Management</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t text-crimson">Total hours required: 12*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Psychiatry -->
+                <div class="border rounded-lg bg-white overflow-hidden border-crimson">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span class="text-crimson">Psychiatry (Formerly Behavioral Medicine)</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 952</div><div>Applied Clinical Psychopharmacology</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 956</div><div>Adult Clinical Psychiatry I</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 957</div><div>Adult Clinical Psychiatry II</div><div>3</div></div>
+                            <div class="italic text-sm text-gray-600 pt-2">Select One Elective:</div>
+                            <div class="course-grid"><div>PA 958</div><div>Child and Adolescent Clinical Psychiatry</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 955</div><div>Evidence-Based Psychotherapies & Leadership</div><div>3</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI in Healthcare -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Artificial Intelligence (AI) in Healthcare</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 995</div><div>AI in Healthcare</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 996</div><div>Precision Medicine with AI</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 998</div><div>AI Strategy and Organizational Implementation</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 997</div><div>Ethics & Regulation of AI in Healthcare</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t text-crimson">Total hours required: 12*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Obesity Medicine -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Obesity Medicine</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 963</div><div>Obesity Medicine</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 924</div><div>Pharmaceutical Research</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 985</div><div>Nutrition & Physical Activity</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 962</div><div>Foundations of Lifestyle Medicine</div><div>3</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humanitarian Medicine -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Humanitarian Medicine</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 943</div><div>Humanitarian Medicine</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 941</div><div>Infectious Disease</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 940</div><div>Global Health</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 934</div><div>Austere Medicine</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t">Total hours required: 12*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital Medicine -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Hospital Medicine</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 945</div><div>Hospital Medicine I</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 946</div><div>Hospital Medicine II</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 939</div><div>Acute Care Pharmacology</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 938</div><div>Interdisciplinary Care Coordination</div><div>3</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Critical Care Medicine -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Critical Care Medicine</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 947</div><div>Critical Care Medicine I</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 948</div><div>Critical Care Medicine II</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 949</div><div>Critical Care Medicine III</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 939</div><div>Acute Care Pharmacology</div><div>3</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MSL / Medical Affairs -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Med Sc Liaison / Med. Aff.</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 921</div><div>Strategic Communication</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 922</div><div>Corporate Compliance</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 924</div><div>Pharmaceutical Research</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 923</div><div>Introduction to MSL</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t">Total hours required: 12*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Medicine -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Emergency Medicine</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 936</div><div>Emergency Medicine I</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 937</div><div>Emergency Medicine II</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 939</div><div>Acute Care Pharmacology</div><div>3</div></div>
+                            <div class="course-grid"><div>-</div><div>1 Elective</div><div>3</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Leadership -->
+                <div class="border rounded-lg bg-white overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full text-left p-4 font-bold flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                        <span>Executive Leadership</span>
+                        <span class="text-xl">+</span>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 space-y-2">
+                            <div class="course-grid"><div>PA 994</div><div>Leadership in AI</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 921</div><div>Strategic Communication</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 922</div><div>Corporate Compliance</div><div>3</div></div>
+                            <div class="course-grid"><div>PA 906</div><div>Healthcare Finance</div><div>3</div></div>
+                            <div class="font-bold pt-2 border-t">Total hours required: 12*</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tab: Concentrations -->
+        <section id="content-concentrations" class="tab-content hidden">
+            <h2 class="text-3xl font-bold text-crimson mb-2">DMSc Concentrations</h2>
+            <p class="mb-8 text-gray-600 italic">Curriculum for Academic Year 2026-2027</p>
+
+            <div class="space-y-6">
+                <!-- Psychiatry Concentration -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-crimson">
+                    <h3 class="text-xl font-bold text-crimson mb-4 underline decoration-2">Psychiatry Concentration</h3>
+                    <div class="text-sm space-y-1">
+                        <div class="course-grid font-medium"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                        <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                        <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                        <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 952</div><div>Applied Clinical Psychopharmacology</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 955</div><div>Evidence-Based Psychotherapies & Leadership</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 956</div><div>Adult Clinical Psychiatry I</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 957</div><div>Adult Clinical Psychiatry II</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 958</div><div>Child and Adolescent Clinical Psychiatry</div><div>3</div></div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Medicine Concentration -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-green-600">
+                    <h3 class="text-xl font-bold text-green-700 mb-4 underline decoration-2">Lifestyle Medicine Concentration</h3>
+                    <div class="text-sm space-y-1">
+                        <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                        <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                        <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                        <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                        <div class="course-grid bg-green-50"><div>PA 962</div><div>Foundations of Lifestyle Medicine</div><div>3</div></div>
+                        <div class="course-grid bg-green-50"><div>PA 968</div><div>Mind-Body Medicine & Social Connection</div><div>3</div></div>
+                        <div class="course-grid bg-green-50"><div>PA 985</div><div>Nutrition and Physical Activity</div><div>3</div></div>
+                        <div class="course-grid bg-green-50"><div>PA 984</div><div>Sleep and Stress</div><div>3</div></div>
+                        <div class="course-grid bg-green-50"><div>PA 969</div><div>Substance Use and Risky Behaviors</div><div>3</div></div>
+                    </div>
+                </div>
+
+                <!-- EMGH Concentration -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4 underline decoration-2">EMGH Concentration</h3>
+                    <div class="text-sm space-y-1">
+                        <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                        <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                        <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 934</div><div>Advanced Austere Medicine</div><div>3</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 932</div><div>Emergency and Disaster Management</div><div>3</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 928</div><div>Doctoral Capstone</div><div>3</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 943</div><div>Humanitarian Response</div><div>3</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 989</div><div>EMGH Practicum (Intensive/Trip)</div><div>1</div></div>
+                        <div class="course-grid bg-blue-50"><div>PA 942</div><div>Global Health Leadership</div><div>3</div></div>
+                        <div class="p-2 bg-blue-100 text-xs mt-2 rounded">
+                            EMGH Elective (Select one): PA 931, PA 935, PA 941
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Professional Practice -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-gray-400">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4 underline decoration-2">Advanced Professional Practice</h3>
+                    <div class="text-sm space-y-1">
+                        <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                        <div class="course-grid"><div>PA 910</div><div>Organizational Behavior and Leadership</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                        <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                        <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 995</div><div>AI in Healthcare</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>PA 963</div><div>Obesity Medicine</div><div>3</div></div>
+                        <div class="course-grid bg-gray-50"><div>-</div><div>Two 3-credit electives</div><div>6</div></div>
+                    </div>
+                </div>
+
+                <!-- Medical Education Concentration -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-yellow-600">
+                    <h3 class="text-xl font-bold text-yellow-700 mb-4 underline decoration-2">Medical Education Concentration</h3>
+                    <div class="text-sm space-y-1">
+                        <div class="course-grid"><div>PA 960</div><div>Evidence-based Medicine</div><div>4</div></div>
+                        <div class="course-grid"><div>PA 910</div><div>Organizational Behavior and Leadership</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 965</div><div>Doctoral Project I</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 966</div><div>Doctoral Project II</div><div>2</div></div>
+                        <div class="course-grid"><div>PA 929</div><div>Doctoral Seminar</div><div>1</div></div>
+                        <div class="course-grid"><div>PA 916</div><div>Healthcare Advocacy</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 997</div><div>Ethics and Regulation of AI</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 925</div><div>Healthcare Systems</div><div>3</div></div>
+                        <div class="course-grid"><div>PA 950</div><div>Healthcare Law</div><div>3</div></div>
+                        <div class="course-grid bg-yellow-50"><div>PA 990</div><div>Teaching and Learning in PA Education</div><div>3</div></div>
+                        <div class="course-grid bg-yellow-50"><div>PA 991</div><div>PA Program Development & Maintenance</div><div>3</div></div>
+                        <div class="course-grid bg-yellow-50"><div>PA 992/993</div><div>Program Eval. OR AI in Education</div><div>3</div></div>
+                        <div class="course-grid bg-yellow-50"><div>-</div><div>1 3-credit elective</div><div>3</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-lynchburg-grey text-white py-12 mt-20 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-bold border-b border-gray-500 mb-4 pb-2">Contact Us</h4>
+                <p class="text-sm">Lynchburg DMSc Program</p>
+                <p class="text-sm">1501 Lakeside Drive</p>
+                <p class="text-sm">Lynchburg, VA 24501</p>
+            </div>
+            <div>
+                <h4 class="font-bold border-b border-gray-500 mb-4 pb-2">Quick Links</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Admissions</a></li>
+                    <li><a href="#" class="hover:underline">Tuition & Fees</a></li>
+                    <li><a href="#" class="hover:underline">Faculty Directory</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold border-b border-gray-500 mb-4 pb-2">Accreditation</h4>
+                <p class="text-xs italic opacity-80">The University of Lynchburg is accredited by the Southern Association of Colleges and Schools Commission on Colleges.</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs opacity-60">
+            © 2026 University of Lynchburg. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Update Tab Buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+            });
+            document.getElementById('tab-' + tabId).classList.add('tab-active');
+
+            // Update Content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            
+            // Scroll to top of content
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleAccordion(btn) {
+            const parent = btn.parentElement;
+            const isOpen = parent.classList.contains('accordion-active');
+            
+            // Close all
+            // document.querySelectorAll('.accordion-active').forEach(item => {
+            //    item.classList.remove('accordion-active');
+            //    item.querySelector('span:last-child').textContent = '+';
+            // });
+
+            if (!isOpen) {
+                parent.classList.add('accordion-active');
+                btn.querySelector('span:last-child').textContent = '-';
+            } else {
+                parent.classList.remove('accordion-active');
+                btn.querySelector('span:last-child').textContent = '+';
+            }
+        }
+    </script>
+</body>
+</html>
